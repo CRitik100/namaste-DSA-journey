@@ -1,3 +1,7 @@
+/**
+ * Consider the number of unique elements in nums to be k​​​​​​​​​​​​​​. After removing duplicates, return the number of unique elements k.
+ */
+
 var removeDuplicates = function (nums) {
   let pointer = 1;
   let temp;

@@ -3,18 +3,11 @@
  * @return {number}
  */
 var balancedStringSplit = function (s) {
-    const data = {
-        R: 0,
-        L: 0
-    }
-    let count = 0;
+    let count = flag = 0;
     for (let i = 0; i < s.length; i++) {
-        data[s[i]] = data[s[i]] + 1;
-        if (data.R == data.L) {
-            count++;
-            data.R = 0;
-            data.L = 0;
-        }
+        if (s[i] == "L") flag++;
+        else if (s[i] == "R") flag--;
+        if (flag == 0) count++; 
     }
     return count;
 };
